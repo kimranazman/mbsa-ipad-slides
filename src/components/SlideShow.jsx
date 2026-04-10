@@ -1,87 +1,42 @@
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-export default function SlideShow({ children, autoPlay = false, autoPlayInterval = 8000 }) {
-  const [current, setCurrent] = useState(0)
-  const containerRef = useRef(null)
-  const total = children.length
-  const autoRef = useRef(null)
-
-  const goTo = useCallback((index) => {
-    const el = containerRef.current
-    if (!el) return
-    const target = Math.max(0, Math.min(index, total - 1))
-    el.scrollTo({ left: target * el.offsetWidth, behavior: 'smooth' })
-  }, [total])
-
-  // Track current slide from scroll position
-  useEffect(() => {
-    const el = containerRef.current
-    if (!el) return
-    let ticking = false
-    const onScroll = () => {
-      if (ticking) return
-      ticking = true
-      requestAnimationFrame(() => {
-        const idx = Math.round(el.scrollLeft / el.offsetWidth)
-        setCurrent(idx)
-        ticking = false
-      })
-    }
-    el.addEventListener('scroll', onScroll, { passive: true })
-    return () => el.removeEventListener('scroll', onScroll)
-  }, [])
-
-  // Auto-play
-  useEffect(() => {
-    if (!autoPlay) return
-    autoRef.current = setInterval(() => {
-      setCurrent(prev => {
-        const next = prev >= total - 1 ? 0 : prev + 1
-        goTo(next)
-        return next
-      })
-    }, autoPlayInterval)
-    return () => clearInterval(autoRef.current)
-  }, [autoPlay, autoPlayInterval, total, goTo])
-
-  // Pause auto-play on touch
-  const pauseAuto = () => {
-    if (autoRef.current) clearInterval(autoRef.current)
-  }
-
+export function BackButton({ to }) {
+  const navigate = useNavigate()
   return (
-    <div className="relative w-full h-full">
-      {/* Slides */}
-      <div
-        ref={containerRef}
-        onTouchStart={pauseAuto}
-        className="slide-container flex w-full h-full overflow-x-auto"
-      >
-        {children.map((child, i) => (
-          <div key={i} className="slide flex-shrink-0 w-full h-full overflow-hidden">
-            {child}
-          </div>
-        ))}
-      </div>
+    <button
+      onClick={() => navigate(to || -1)}
+      className="tap flex items-center gap-2 text-rstu-red font-semibold text-sm"
+    >
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+      Kembali
+    </button>
+  )
+}
 
-      {/* Dots */}
-      <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-10">
-        {Array.from({ length: total }, (_, i) => (
-          <button
-            key={i}
-            onClick={() => goTo(i)}
-            className={`rounded-full transition-all duration-300 ${
-              i === current
-                ? 'w-8 h-3 bg-rstu-red'
-                : 'w-3 h-3 bg-rstu-red/25'
-            }`}
-          />
-        ))}
-      </div>
+export function PageHeader({ title, subtitle, back }) {
+  return (
+    <div className="flex items-center gap-3 px-6 pt-6 pb-4">
+      {back && <BackButton to={back} />}
+      {!back && (
+        <div>
+          <h1 className="text-xl font-black text-gray-900">{title}</h1>
+          {subtitle && <p className="text-xs text-gray-500">{subtitle}</p>}
+        </div>
+      )}
+    </div>
+  )
+}
 
-      {/* Slide counter */}
-      <div className="absolute top-4 right-4 z-10 bg-black/10 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium text-gray-600">
-        {current + 1} / {total}
+export function Footer() {
+  return (
+    <div className="flex items-center justify-between px-6 py-3 text-[10px] text-gray-400 flex-shrink-0">
+      <span>www.selangor.gov.my</span>
+      <div className="flex items-center gap-1.5">
+        <span className="font-semibold text-gray-500">MALAYSIA MADANI</span>
+        <span className="text-gray-300">|</span>
+        <span className="font-bold text-rstu-red">KITA SELANGOR</span>
       </div>
     </div>
   )
