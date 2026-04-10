@@ -91,10 +91,10 @@ function CabaranPage() {
 function ObjektifPage() {
   const objektif = [
     { num: 1, title: 'Reformasi Perkhidmatan Awam', desc: 'Mentransformasi perkhidmatan awam agar lebih cekap, pantas dan berkesan.', Icon: IconGlobe, gold: true },
-    { num: 2, title: 'Reformasi Pengurusan Integriti', desc: 'Memperkukuhkan integriti melalui transformasi digital dengan perkongsian data strategik.', Icon: IconShield },
+    { num: 2, title: 'Reformasi Pengurusan Integriti', desc: 'Transformasi digital yang perlahan dengan perkongsian data terbatas.', Icon: IconShield },
     { num: 3, title: 'Reformasi Modal Insan', desc: 'Melahirkan pemimpin berdaya saing dan berfikir strategik.', Icon: IconPeople, gold: true },
     { num: 4, title: 'Reformasi Dasar & Perkhidmatan', desc: 'Menyampaikan dasar dan perkhidmatan yang difahami, diterima dan dirasai rakyat.', Icon: IconTarget },
-    { num: 5, title: 'Reformasi Jentera Akar Umbi', desc: 'Membina sinergi penyampaian dasar kerajaan melalui pemberdayaan pemimpin tempatan.', Icon: IconLayers, gold: true },
+    { num: 5, title: 'Reformasi Jentera Akar Umbi', desc: 'Membina sinergi keterangkuman penyampaian dasar kerajaan melalui pemberdayaan pemimpin tempatan.', Icon: IconLayers, gold: true },
   ]
 
   return (
@@ -105,7 +105,7 @@ function ObjektifPage() {
           <p className="text-[10px] text-rstu-gold font-bold uppercase tracking-widest">Matlamat</p>
         </div>
         <p className="text-sm text-rstu-dark leading-relaxed">
-          Menjadi pemacu (enabler) utama kepada pelaksanaan dasar Kerajaan Negeri melalui pembaharuan sistem penyampaian dan tadbir urus yang cekap, telus dan berimpak.
+          Menjadi pemacu (enabler) utama kepada pelaksanaan dasar Kerajaan Negeri dan penyelarasan dasar Kerajaan Persekutuan melalui pembaharuan sistem penyampaian dan tadbir urus yang cekap, telus dan berimpak.
         </p>
       </div>
 
@@ -136,7 +136,7 @@ function KerangkaPage() {
     'Tadbir Urus & Integriti', 'Reformasi Penyampaian',
     'Pemecahan Budaya Silo', 'Reformasi Aduan',
     'Modal Insan Berdaya', 'Pemerkasaan Akar Umbi',
-    'Pengukuran & Pemantauan', 'Penilaian Berasaskan Hasil',
+    'Pengukuran & Pemantauan Program', 'Penilaian Berasaskan Hasil',
   ]
 
   return (
@@ -150,7 +150,7 @@ function KerangkaPage() {
       <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
         <SectionLabel>Matlamat</SectionLabel>
         <p className="text-xs text-gray-600 mt-2 leading-relaxed">
-          Menjadi pemacu (enabler) utama kepada pelaksanaan dasar kerajaan melalui pembaharuan sistem penyampaian dan tadbir urus yang cekap, telus dan berimpak.
+          Menjadi pemacu (enabler) utama kepada pelaksanaan dasar Kerajaan Negeri dan penyelarasan dasar Kerajaan Persekutuan melalui pembaharuan sistem penyampaian dan tadbir urus yang cekap, telus dan berimpak.
         </p>
       </div>
 
