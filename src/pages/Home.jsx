@@ -43,9 +43,9 @@ export default function Home() {
           <div className="flex flex-col gap-3.5 w-full">
             <Link
               to="/rstu"
-              className="tap group block bg-white rounded-2xl p-5 no-underline shadow-md border border-gray-100 hover:border-rstu-gold/30 transition-colors"
+              className="tap group block bg-white rounded-2xl no-underline shadow-md border border-gray-100 overflow-hidden"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 p-5 pr-4">
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-rstu-red to-rstu-dark flex items-center justify-center flex-shrink-0 shadow-md shadow-rstu-red/20">
                   <IconTarget size={26} className="text-white" />
                 </div>
@@ -53,15 +53,17 @@ export default function Home() {
                   <p className="text-lg font-bold text-gray-900">5 Objektif RSTU</p>
                   <p className="text-xs text-gray-500 mt-0.5">Kerangka, nilai & hala tuju reformasi</p>
                 </div>
-                <IconChevron size={20} className="text-rstu-gold group-active:translate-x-1 transition-transform" />
+                <div className="w-8 h-8 rounded-full bg-rstu-red/5 flex items-center justify-center flex-shrink-0">
+                  <IconChevron size={16} className="text-rstu-red chevron-hint" />
+                </div>
               </div>
             </Link>
 
             <Link
               to="/produk"
-              className="tap group block bg-white rounded-2xl p-5 no-underline shadow-md border border-gray-100 hover:border-rstu-gold/30 transition-colors"
+              className="tap group block bg-white rounded-2xl no-underline shadow-md border border-gray-100 overflow-hidden"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 p-5 pr-4">
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-rstu-gold to-rstu-yellow flex items-center justify-center flex-shrink-0 shadow-md shadow-rstu-gold/20">
                   <IconShield size={26} className="text-white" />
                 </div>
@@ -69,7 +71,9 @@ export default function Home() {
                   <p className="text-lg font-bold text-gray-900">Produk Inovasi</p>
                   <p className="text-xs text-gray-500 mt-0.5">SPKB, MyMR, ABT Tracker, OTS</p>
                 </div>
-                <IconChevron size={20} className="text-rstu-gold group-active:translate-x-1 transition-transform" />
+                <div className="w-8 h-8 rounded-full bg-rstu-gold/10 flex items-center justify-center flex-shrink-0">
+                  <IconChevron size={16} className="text-rstu-gold chevron-hint" />
+                </div>
               </div>
             </Link>
           </div>

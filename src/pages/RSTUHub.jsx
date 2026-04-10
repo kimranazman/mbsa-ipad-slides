@@ -73,34 +73,38 @@ export default function RSTUHub() {
             <Link
               key={t.id}
               to={`/rstu/${t.id}`}
-              className="tap block bg-white rounded-2xl p-4 no-underline shadow-sm border border-gray-100 flex flex-col min-h-[160px] relative overflow-hidden"
+              className="tap block bg-white rounded-2xl no-underline shadow-sm border border-gray-100 flex flex-col min-h-[160px] relative overflow-hidden"
             >
-              {/* Accent corner */}
-              {t.accent && (
-                <div className="absolute top-0 right-0 w-16 h-16">
-                  <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-rstu-gold/10 to-transparent rounded-bl-3xl" />
+              {/* Right edge accent strip */}
+              <div className={`absolute top-0 right-0 w-1 h-full rounded-r-2xl ${
+                t.accent ? 'bg-gradient-to-b from-rstu-gold to-rstu-yellow' : 'bg-gradient-to-b from-rstu-red to-rstu-dark'
+              }`} />
+
+              <div className="p-4 flex flex-col flex-1">
+                {/* Icon */}
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-3 ${
+                  t.accent
+                    ? 'bg-gradient-to-br from-rstu-gold to-rstu-yellow shadow-sm shadow-rstu-gold/20'
+                    : 'bg-gradient-to-br from-rstu-red to-rstu-dark shadow-sm shadow-rstu-red/20'
+                }`}>
+                  <t.Icon size={20} className="text-white" />
                 </div>
-              )}
 
-              {/* Icon */}
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-3 ${
-                t.accent
-                  ? 'bg-gradient-to-br from-rstu-gold to-rstu-yellow shadow-sm shadow-rstu-gold/20'
-                  : 'bg-gradient-to-br from-rstu-red to-rstu-dark shadow-sm shadow-rstu-red/20'
-              }`}>
-                <t.Icon size={20} className="text-white" />
-              </div>
+                {/* Stat */}
+                <p className={`text-3xl font-black leading-none ${t.accent ? 'text-rstu-gold' : 'text-rstu-red'}`}>
+                  {t.highlight}
+                </p>
+                <p className="text-[10px] text-gray-400 mt-0.5">{t.desc}</p>
 
-              {/* Stat */}
-              <p className={`text-3xl font-black leading-none ${t.accent ? 'text-rstu-gold' : 'text-rstu-red'}`}>
-                {t.highlight}
-              </p>
-              <p className="text-[10px] text-gray-400 mt-0.5">{t.desc}</p>
-
-              {/* Title + chevron */}
-              <div className="flex items-center justify-between mt-auto pt-3">
-                <p className="text-sm font-bold text-gray-900 leading-tight">{t.title}</p>
-                <IconChevron size={14} className="text-gray-300 flex-shrink-0" />
+                {/* Title + chevron pill */}
+                <div className="flex items-center justify-between mt-auto pt-3">
+                  <p className="text-sm font-bold text-gray-900 leading-tight pr-1">{t.title}</p>
+                  <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 ${
+                    t.accent ? 'bg-rstu-gold/10' : 'bg-rstu-red/8'
+                  }`}>
+                    <IconChevron size={12} className={`chevron-hint ${t.accent ? 'text-rstu-gold' : 'text-rstu-red/60'}`} />
+                  </div>
+                </div>
               </div>
             </Link>
           ))}

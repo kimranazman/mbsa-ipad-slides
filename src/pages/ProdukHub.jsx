@@ -63,11 +63,16 @@ export default function ProdukHub() {
             <Link
               key={p.id}
               to={`/produk/${p.id}`}
-              className="tap block bg-white rounded-2xl no-underline shadow-sm border border-gray-100 overflow-hidden"
+              className="tap block bg-white rounded-2xl no-underline shadow-sm border border-gray-100 overflow-hidden relative"
             >
+              {/* Right edge accent */}
+              <div className={`absolute top-0 right-0 w-1 h-full ${
+                p.gold ? 'bg-gradient-to-b from-rstu-gold to-rstu-yellow' : 'bg-gradient-to-b from-rstu-red to-rstu-dark'
+              }`} />
+
               {/* Top section */}
-              <div className={`p-5 flex items-center gap-4 ${
-                p.gold ? 'bg-gradient-to-r from-rstu-gold/5 to-rstu-yellow/5' : ''
+              <div className={`p-5 pr-4 flex items-center gap-4 ${
+                p.gold ? 'bg-gradient-to-r from-rstu-gold/5 to-transparent' : ''
               }`}>
                 <div className={`w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md ${
                   p.gold
@@ -80,7 +85,11 @@ export default function ProdukHub() {
                   <p className={`text-xl font-black ${p.gold ? 'text-rstu-gold' : 'text-rstu-red'}`}>{p.name}</p>
                   <p className="text-xs text-gray-500 mt-0.5">{p.full}</p>
                 </div>
-                <IconChevron size={18} className="text-gray-300" />
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
+                  p.gold ? 'bg-rstu-gold/10' : 'bg-rstu-red/8'
+                }`}>
+                  <IconChevron size={14} className={`chevron-hint ${p.gold ? 'text-rstu-gold' : 'text-rstu-red/60'}`} />
+                </div>
               </div>
 
               {/* Flow section */}

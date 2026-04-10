@@ -142,6 +142,16 @@ html, body, #root {
 .scroll-hide { scrollbar-width: none; }
 .scroll-hide::-webkit-scrollbar { display: none; }
 
+/* Chevron nudge — gentle repeating hint */
+@keyframes nudge-right {
+  0%, 60%, 100% { transform: translateX(0); }
+  30% { transform: translateX(3px); }
+}
+.chevron-hint {
+  animation: nudge-right 2.4s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
 /* Gold badge */
 .badge-gold {
   background: linear-gradient(135deg, #F5A623, #FDB913);
