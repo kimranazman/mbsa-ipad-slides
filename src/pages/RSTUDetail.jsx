@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { BackButton, Footer, SectionLabel } from '../components/SlideShow'
-import { IconChart, IconWarning, IconTarget, IconLayers, IconHeart, IconStar, IconCheck, IconGlobe, IconBuilding } from '../components/Icons'
+import { IconChart, IconWarning, IconTarget, IconLayers, IconHeart, IconStar, IconCheck, IconGlobe, IconBuilding, IconShield, IconPeople } from '../components/Icons'
 
 function StatCard({ value, label, gold }) {
   return (
@@ -34,19 +34,20 @@ function EkonomiPage() {
           <IconChart size={16} className="text-rstu-gold" />
           <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Pertumbuhan Berterusan</p>
         </div>
-        <div className="flex items-end justify-between h-32 px-1">
+        <div className="flex items-end justify-between px-1" style={{ height: 128 }}>
           {[
-            { year: '2020', pct: 30, val: '24.0%' },
-            { year: '2021', pct: 42, val: '24.8%' },
-            { year: '2022', pct: 60, val: '25.6%' },
-            { year: '2023', pct: 78, val: '26.0%' },
-            { year: '2024', pct: 95, val: '26.2%' },
-          ].map(({ year, pct, val }, i) => (
+            { year: '2020', h: 38, val: '24.0%' },
+            { year: '2021', h: 54, val: '24.8%' },
+            { year: '2022', h: 77, val: '25.6%' },
+            { year: '2023', h: 100, val: '26.0%' },
+            { year: '2024', h: 120, val: '26.2%' },
+          ].map(({ year, h, val }, i) => (
             <div key={year} className="flex flex-col items-center gap-1.5 flex-1">
               <span className="text-[9px] font-bold text-rstu-gold">{val}</span>
-              <div className="w-8 rounded-t-xl relative overflow-hidden" style={{ height: `${pct}%` }}>
-                <div className={`absolute inset-0 ${i === 4 ? 'bg-gradient-to-t from-rstu-gold to-rstu-yellow' : 'bg-gradient-to-t from-rstu-red/80 to-rstu-red/40'}`} />
-              </div>
+              <div
+                className={`w-8 rounded-t-xl ${i === 4 ? 'bg-gradient-to-t from-rstu-gold to-rstu-yellow' : 'bg-gradient-to-t from-rstu-red/80 to-rstu-red/40'}`}
+                style={{ height: h }}
+              />
               <span className="text-[10px] text-gray-400 font-medium">{year}</span>
             </div>
           ))}
@@ -258,9 +259,6 @@ function HEMATPage() {
     </div>
   )
 }
-
-// Need to import IconPeople and IconShield for ObjektifPage
-import { IconPeople } from '../components/Icons'
 
 const pages = {
   ekonomi: { title: 'Ekonomi Selangor', subtitle: 'Sumbangan KDNK Negeri', component: EkonomiPage, Icon: IconChart },
