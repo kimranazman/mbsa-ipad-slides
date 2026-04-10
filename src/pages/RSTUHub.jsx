@@ -62,7 +62,7 @@ export default function RSTUHub() {
       </div>
       <div className="px-6 pb-5 flex-shrink-0">
         <span className="badge-gold">Reformasi</span>
-        <h1 className="text-3xl font-black text-gray-900 mt-2">5 Objektif RSTU</h1>
+        <h1 className="text-3xl font-black text-gray-900 mt-2">RSTU Negeri Selangor</h1>
         <p className="text-sm text-gray-500 mt-1">Reformasi Sistem Penyampaian & Tadbir Urus</p>
       </div>
 

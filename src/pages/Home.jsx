@@ -50,8 +50,8 @@ export default function Home() {
                   <IconTarget size={26} className="text-white" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-lg font-bold text-gray-900">5 Objektif RSTU</p>
-                  <p className="text-xs text-gray-500 mt-0.5">Kerangka, nilai & hala tuju reformasi</p>
+                  <p className="text-lg font-bold text-gray-900">RSTU Negeri Selangor</p>
+                  <p className="text-xs text-gray-500 mt-0.5">Objektif, kerangka, nilai & hala tuju reformasi</p>
                 </div>
                 <div className="w-8 h-8 rounded-full bg-rstu-red/5 flex items-center justify-center flex-shrink-0">
                   <IconChevron size={16} className="text-rstu-red chevron-hint" />
