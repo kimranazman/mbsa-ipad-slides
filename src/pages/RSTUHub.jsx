@@ -1,81 +1,106 @@
 import { Link } from 'react-router-dom'
 import { BackButton, Footer } from '../components/SlideShow'
+import { IconChart, IconWarning, IconTarget, IconLayers, IconHeart, IconStar, IconChevron } from '../components/Icons'
 
 const topics = [
   {
     id: 'ekonomi',
     title: 'Ekonomi Selangor',
-    stat: '26.2%',
+    highlight: '26.2%',
     desc: 'Sumbangan KDNK tertinggi',
-    color: 'bg-gradient-to-br from-rstu-red to-red-700',
+    Icon: IconChart,
+    accent: true,
   },
   {
     id: 'cabaran',
     title: '7 Cabaran Utama',
-    stat: '7',
+    highlight: '7',
     desc: 'Perkhidmatan Awam',
-    color: 'bg-gradient-to-br from-red-600 to-red-800',
+    Icon: IconWarning,
   },
   {
     id: 'objektif',
     title: '5 Objektif RSTU',
-    stat: '5',
+    highlight: '5',
     desc: 'Hala tuju reformasi',
-    color: 'bg-gradient-to-br from-rstu-red to-rstu-dark',
+    Icon: IconTarget,
+    accent: true,
   },
   {
     id: 'kerangka',
     title: 'Kerangka RSTU',
-    stat: '2025',
+    highlight: '2025',
     desc: 'Framework 2025-2027',
-    color: 'bg-gradient-to-br from-red-700 to-red-900',
+    Icon: IconLayers,
   },
   {
     id: 'ehsan',
     title: 'Nilai E.H.S.A.N',
-    stat: '5',
+    highlight: '5',
     desc: 'Nilai teras reformasi',
-    color: 'bg-gradient-to-br from-rstu-dark to-red-950',
+    Icon: IconHeart,
   },
   {
     id: 'hemat',
     title: 'Nilai H.E.M.A.T',
-    stat: '5',
+    highlight: '5',
     desc: 'Nilai penjawat awam',
-    color: 'bg-gradient-to-br from-red-800 to-red-950',
+    Icon: IconStar,
+    accent: true,
   },
 ]
 
 export default function RSTUHub() {
   return (
     <div className="h-full flex flex-col bg-rstu-strong">
+      {/* Gold top accent */}
+      <div className="h-1 bg-gradient-to-r from-rstu-red via-rstu-gold to-rstu-red flex-shrink-0" />
+
       {/* Header */}
-      <div className="px-6 pt-6 pb-2 flex items-center gap-3">
+      <div className="px-6 pt-5 pb-1 flex-shrink-0">
         <BackButton to="/" />
       </div>
-      <div className="px-6 pb-4">
-        <h1 className="text-3xl font-black text-gray-900">5 Objektif RSTU</h1>
+      <div className="px-6 pb-5 flex-shrink-0">
+        <span className="badge-gold">Reformasi</span>
+        <h1 className="text-3xl font-black text-gray-900 mt-2">5 Objektif RSTU</h1>
         <p className="text-sm text-gray-500 mt-1">Reformasi Sistem Penyampaian & Tadbir Urus</p>
       </div>
 
       {/* Cards Grid */}
-      <div className="flex-1 overflow-y-auto scroll-hide px-6 pb-4">
-        <div className="grid grid-cols-2 gap-3 stagger">
+      <div className="flex-1 overflow-y-auto scroll-hide px-6 pb-6">
+        <div className="grid grid-cols-2 gap-3 stagger-pop">
           {topics.map((t) => (
             <Link
               key={t.id}
               to={`/rstu/${t.id}`}
-              className={`tap ${t.color} rounded-2xl p-5 text-white no-underline shadow-md flex flex-col justify-between min-h-[140px]`}
+              className="tap block bg-white rounded-2xl p-4 no-underline shadow-sm border border-gray-100 flex flex-col min-h-[160px] relative overflow-hidden"
             >
-              <div>
-                <p className="text-3xl font-black leading-none">{t.stat}</p>
-                <p className="text-xs opacity-60 mt-1">{t.desc}</p>
+              {/* Accent corner */}
+              {t.accent && (
+                <div className="absolute top-0 right-0 w-16 h-16">
+                  <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-rstu-gold/10 to-transparent rounded-bl-3xl" />
+                </div>
+              )}
+
+              {/* Icon */}
+              <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-3 ${
+                t.accent
+                  ? 'bg-gradient-to-br from-rstu-gold to-rstu-yellow shadow-sm shadow-rstu-gold/20'
+                  : 'bg-gradient-to-br from-rstu-red to-rstu-dark shadow-sm shadow-rstu-red/20'
+              }`}>
+                <t.Icon size={20} className="text-white" />
               </div>
-              <div className="flex items-center justify-between mt-3">
-                <p className="text-sm font-bold leading-tight">{t.title}</p>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="opacity-40 flex-shrink-0">
-                  <path d="M6 12L10 8L6 4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+
+              {/* Stat */}
+              <p className={`text-3xl font-black leading-none ${t.accent ? 'text-rstu-gold' : 'text-rstu-red'}`}>
+                {t.highlight}
+              </p>
+              <p className="text-[10px] text-gray-400 mt-0.5">{t.desc}</p>
+
+              {/* Title + chevron */}
+              <div className="flex items-center justify-between mt-auto pt-3">
+                <p className="text-sm font-bold text-gray-900 leading-tight">{t.title}</p>
+                <IconChevron size={14} className="text-gray-300 flex-shrink-0" />
               </div>
             </Link>
           ))}

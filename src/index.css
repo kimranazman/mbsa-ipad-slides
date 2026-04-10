@@ -5,7 +5,9 @@
   --color-rstu-dark: #8B1117;
   --color-rstu-light: #FDE8E8;
   --color-rstu-gold: #F5A623;
-  --color-rstu-bg: #FFF5F5;
+  --color-rstu-yellow: #FDB913;
+  --color-rstu-cream: #FFF8E7;
+  --color-rstu-bg: #FAFAFA;
 }
 
 * {
@@ -26,100 +28,128 @@ html, body, #root {
   background: #fff;
 }
 
-/* Subtle backgrounds */
+/* ---- Backgrounds ---- */
 .bg-rstu {
   background:
-    radial-gradient(ellipse at top left, rgba(196, 30, 36, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at bottom right, rgba(196, 30, 36, 0.05) 0%, transparent 50%),
-    #fff;
+    radial-gradient(ellipse at top left, rgba(196, 30, 36, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(245, 166, 35, 0.06) 0%, transparent 50%),
+    #FAFAFA;
 }
 
 .bg-rstu-strong {
   background:
-    radial-gradient(ellipse at top left, rgba(196, 30, 36, 0.12) 0%, transparent 40%),
-    radial-gradient(ellipse at top right, rgba(196, 30, 36, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at bottom right, rgba(196, 30, 36, 0.10) 0%, transparent 40%),
-    #fff;
+    radial-gradient(ellipse at top left, rgba(196, 30, 36, 0.10) 0%, transparent 40%),
+    radial-gradient(ellipse at top right, rgba(245, 166, 35, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at bottom left, rgba(253, 185, 19, 0.05) 0%, transparent 40%),
+    #FAFAFA;
 }
 
-/* Page transitions */
+/* ---- Animations ---- */
 @keyframes pageIn {
-  from { opacity: 0; transform: translateX(30px); }
+  from { opacity: 0; transform: translateX(24px); }
   to { opacity: 1; transform: translateX(0); }
 }
-
-@keyframes pageOut {
-  from { opacity: 1; transform: translateX(0); }
-  to { opacity: 0; transform: translateX(-20px); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.page-enter {
+  animation: pageIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 @keyframes fadeInScale {
-  from { opacity: 0; transform: scale(0.95); }
+  from { opacity: 0; transform: scale(0.92); }
   to { opacity: 1; transform: scale(1); }
 }
 
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px); }
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-12px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.page-enter {
-  animation: pageIn 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  70% { transform: scale(1.03); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
-.fade-in {
-  animation: fadeIn 0.3s ease-out both;
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 /* Staggered children */
 .stagger > * {
   opacity: 0;
-  animation: fadeInUp 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: fadeInUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
-.stagger > *:nth-child(1) { animation-delay: 0.05s; }
-.stagger > *:nth-child(2) { animation-delay: 0.1s; }
-.stagger > *:nth-child(3) { animation-delay: 0.15s; }
-.stagger > *:nth-child(4) { animation-delay: 0.2s; }
-.stagger > *:nth-child(5) { animation-delay: 0.25s; }
-.stagger > *:nth-child(6) { animation-delay: 0.3s; }
-.stagger > *:nth-child(7) { animation-delay: 0.35s; }
-.stagger > *:nth-child(8) { animation-delay: 0.4s; }
-.stagger > *:nth-child(9) { animation-delay: 0.45s; }
+.stagger > *:nth-child(1) { animation-delay: 0.04s; }
+.stagger > *:nth-child(2) { animation-delay: 0.08s; }
+.stagger > *:nth-child(3) { animation-delay: 0.12s; }
+.stagger > *:nth-child(4) { animation-delay: 0.16s; }
+.stagger > *:nth-child(5) { animation-delay: 0.20s; }
+.stagger > *:nth-child(6) { animation-delay: 0.24s; }
+.stagger > *:nth-child(7) { animation-delay: 0.28s; }
+.stagger > *:nth-child(8) { animation-delay: 0.32s; }
+.stagger > *:nth-child(9) { animation-delay: 0.36s; }
+.stagger > *:nth-child(10) { animation-delay: 0.40s; }
+
+/* Pop-in for hub cards */
+.stagger-pop > * {
+  opacity: 0;
+  animation: popIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.stagger-pop > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger-pop > *:nth-child(2) { animation-delay: 0.10s; }
+.stagger-pop > *:nth-child(3) { animation-delay: 0.15s; }
+.stagger-pop > *:nth-child(4) { animation-delay: 0.20s; }
+.stagger-pop > *:nth-child(5) { animation-delay: 0.25s; }
+.stagger-pop > *:nth-child(6) { animation-delay: 0.30s; }
 
 /* Tap effect */
 .tap {
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.2s ease;
 }
 .tap:active {
-  transform: scale(0.97);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transform: scale(0.96);
 }
+
+/* Gold shimmer */
+.gold-shimmer {
+  background: linear-gradient(90deg, #F5A623 25%, #FFD76E 50%, #F5A623 75%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Float */
+.float { animation: float 3s ease-in-out infinite; }
 
 /* Scrollbar */
-.scroll-hide {
-  scrollbar-width: none;
-}
-.scroll-hide::-webkit-scrollbar {
-  display: none;
-}
+.scroll-hide { scrollbar-width: none; }
+.scroll-hide::-webkit-scrollbar { display: none; }
 
-/* Number counter animation */
-@keyframes countUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.count-in {
-  animation: countUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation-delay: 0.3s;
+/* Gold badge */
+.badge-gold {
+  background: linear-gradient(135deg, #F5A623, #FDB913);
+  color: white;
+  font-weight: 700;
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }

@@ -1,10 +1,13 @@
 import { useParams } from 'react-router-dom'
-import { BackButton, Footer } from '../components/SlideShow'
+import { BackButton, Footer, SectionLabel } from '../components/SlideShow'
+import { IconShield, IconPeople, IconMapPin, IconWater, IconCheck, IconArrowRight } from '../components/Icons'
 
 const products = {
   spkb: {
     name: 'SPKB',
     full: 'Sistem Penguatkuasaan Bersepadu',
+    Icon: IconShield,
+    gold: false,
     origin: { name: 'MPHS', full: 'Majlis Perbandaran Hulu Selangor' },
     expanded: [
       { name: 'MPKS', full: 'Majlis Perbandaran Kuala Selangor' },
@@ -16,6 +19,8 @@ const products = {
   mymr: {
     name: 'MyMR',
     full: 'Sistem MyMR',
+    Icon: IconPeople,
+    gold: true,
     origin: { name: 'MPSp', full: 'Majlis Perbandaran Sepang' },
     expanded: [
       { name: 'MPS', full: 'Majlis Perbandaran Selayang' },
@@ -28,6 +33,8 @@ const products = {
   abt: {
     name: 'ABT Tracker',
     full: 'Sistem ABT Tracker',
+    Icon: IconMapPin,
+    gold: false,
     origin: { name: 'PDT Petaling', full: 'Pejabat Daerah & Tanah Petaling' },
     expanded: [
       { name: 'PDT Klang', full: 'Pejabat Daerah & Tanah Klang' },
@@ -40,6 +47,8 @@ const products = {
   ots: {
     name: 'OTS',
     full: 'Overflow Tripping System',
+    Icon: IconWater,
+    gold: true,
     origin: { name: 'SUK Selangor', full: 'Pejabat Setiausaha Kerajaan Negeri' },
     expanded: [
       { name: 'MBSA', full: 'Majlis Bandaraya Shah Alam' },
@@ -54,7 +63,7 @@ const products = {
       'Pemantauan 24 jam via telefon pintar',
       'Perlindungan sekunder automatik',
     ],
-    tags: ['Harta Intelek', 'Produk Rintis', 'Pemantauan 24/7', 'Pengkomersilan'],
+    tags: ['Harta Intelek', 'Produk Rintis', 'Pemantauan 24/7', 'Selgem Sdn. Bhd.'],
   },
 }
 
@@ -62,59 +71,76 @@ export default function ProdukDetail() {
   const { product } = useParams()
   const p = products[product]
 
-  if (!p) return <div className="h-full flex items-center justify-center">Not found</div>
+  if (!p) return <div className="h-full flex items-center justify-center text-gray-400">Tidak dijumpai</div>
+
+  const accentBg = p.gold ? 'from-rstu-gold to-rstu-yellow' : 'from-rstu-red to-rstu-dark'
+  const accentText = p.gold ? 'text-rstu-gold' : 'text-rstu-red'
+  const accentLight = p.gold ? 'bg-rstu-cream' : 'bg-rstu-light'
+  const accentBorder = p.gold ? 'border-rstu-gold/15' : 'border-rstu-red/10'
 
   return (
     <div className="h-full flex flex-col bg-rstu-strong">
+      <div className={`h-1 flex-shrink-0 bg-gradient-to-r ${accentBg}`} />
+
       {/* Header */}
-      <div className="px-6 pt-6 pb-2 flex items-center justify-between flex-shrink-0">
+      <div className="px-6 pt-5 pb-1 flex items-center justify-between flex-shrink-0">
         <BackButton to="/produk" />
-        <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Produk Inovasi</span>
+        <SectionLabel>Produk Inovasi</SectionLabel>
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto scroll-hide px-6 pb-4 page-enter">
+      <div className="flex-1 overflow-y-auto scroll-hide px-6 pb-6 page-enter">
         <div className="stagger flex flex-col gap-4">
           {/* Product Header */}
-          <div className="bg-rstu-red rounded-2xl p-6 text-white text-center shadow-lg shadow-rstu-red/20">
-            <p className="text-4xl font-black">{p.name}</p>
+          <div className={`bg-gradient-to-br ${accentBg} rounded-2xl p-6 text-white text-center shadow-lg relative overflow-hidden`}>
+            <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-bl-full" />
+            <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto backdrop-blur-sm">
+              <p.Icon size={32} className="text-white" />
+            </div>
+            <p className="text-3xl font-black mt-3">{p.name}</p>
             <p className="text-sm opacity-70 mt-1">{p.full}</p>
           </div>
 
           {/* Origin */}
-          <div className="bg-white rounded-2xl p-4 border border-rstu-red/10 shadow-sm">
-            <p className="text-[10px] text-rstu-red font-bold uppercase tracking-widest">Agensi Pelaksana</p>
-            <p className="text-xl font-black text-gray-900 mt-1">{p.origin.name}</p>
+          <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+            <div className="flex items-center gap-2 mb-2">
+              <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${accentBg}`} />
+              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Agensi Pelaksana</p>
+            </div>
+            <p className={`text-xl font-black ${accentText}`}>{p.origin.name}</p>
             <p className="text-xs text-gray-500">{p.origin.full}</p>
           </div>
 
           {/* Expanded to */}
-          <div className="bg-white rounded-2xl p-4 border border-rstu-red/10 shadow-sm">
-            <p className="text-[10px] text-rstu-red font-bold uppercase tracking-widest mb-3">Dikembangkan ke</p>
+          <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+            <div className="flex items-center gap-2 mb-3">
+              <IconArrowRight size={14} className={accentText} />
+              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Dikembangkan ke</p>
+            </div>
             <div className={`grid gap-2 ${p.expanded.length <= 2 ? 'grid-cols-2' : p.expanded.length === 3 ? 'grid-cols-3' : 'grid-cols-2'}`}>
               {p.expanded.map(e => (
-                <div key={e.name} className="tap bg-rstu-light rounded-xl p-3 text-center">
-                  <p className="text-lg font-black text-rstu-red">{e.name}</p>
-                  <p className="text-[9px] text-rstu-dark/60 mt-0.5">{e.full}</p>
+                <div key={e.name} className={`tap ${accentLight} rounded-xl p-3 text-center border ${accentBorder}`}>
+                  <p className={`text-lg font-black ${accentText}`}>{e.name}</p>
+                  <p className="text-[9px] text-gray-400 mt-0.5 leading-tight">{e.full}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Description */}
-          <div className="bg-white rounded-2xl p-4 border border-rstu-red/10 shadow-sm">
-            <p className="text-[10px] text-rstu-red font-bold uppercase tracking-widest">Mengenai {p.name}</p>
-            <p className="text-sm text-gray-600 mt-2 leading-relaxed">{p.desc}</p>
+          <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+            <SectionLabel>Keterangan</SectionLabel>
+            <p className="text-sm text-gray-600 mt-3 leading-relaxed">{p.desc}</p>
           </div>
 
           {/* Highlights */}
-          <div className="bg-white rounded-2xl p-4 border border-rstu-red/10 shadow-sm">
-            <p className="text-[10px] text-rstu-red font-bold uppercase tracking-widest mb-2">Ciri-ciri Utama</p>
-            <div className="flex flex-col gap-2">
+          <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+            <SectionLabel>Ciri-ciri Utama</SectionLabel>
+            <div className="flex flex-col gap-2.5 mt-3">
               {p.highlights.map((h, i) => (
-                <div key={i} className="flex items-center gap-2.5">
-                  <div className="w-6 h-6 rounded-full bg-rstu-red/10 flex items-center justify-center flex-shrink-0">
-                    <div className="w-2 h-2 rounded-full bg-rstu-red" />
+                <div key={i} className="flex items-center gap-3">
+                  <div className={`w-7 h-7 rounded-lg bg-gradient-to-br ${accentBg} flex items-center justify-center flex-shrink-0 shadow-sm`}>
+                    <IconCheck size={14} className="text-white" />
                   </div>
                   <p className="text-sm text-gray-700 font-medium">{h}</p>
                 </div>
@@ -122,11 +148,13 @@ export default function ProdukDetail() {
             </div>
           </div>
 
-          {/* Tags (for OTS) */}
+          {/* Tags */}
           {p.tags && (
             <div className="flex flex-wrap gap-2">
-              {p.tags.map(tag => (
-                <span key={tag} className="text-xs bg-rstu-light text-rstu-red font-semibold px-3 py-1.5 rounded-full">{tag}</span>
+              {p.tags.map((tag, i) => (
+                <span key={tag} className={`text-xs font-semibold px-3 py-1.5 rounded-full ${
+                  i % 2 === 0 ? `${accentLight} ${accentText}` : 'bg-gray-100 text-gray-600'
+                }`}>{tag}</span>
               ))}
             </div>
           )}
