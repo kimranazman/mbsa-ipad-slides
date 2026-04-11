@@ -4,6 +4,7 @@
   "authoritativeOrder": [
     "pptx",
     "slaid_pdf",
+    "talking_point_sub",
     "innovasi_pack",
     "handoff"
   ],
@@ -15,6 +16,10 @@
     "slaid_pdf": {
       "path": "RSTU/SLAID RSTU SS.pdf",
       "note": "Earlier RSTU briefing deck, authored by Saiful Azri via Canva, dated 3 August 2025. 18 pages. Official client source. Contains detailed H.E.M.A.T values and KPPA/PKSN source citations not present in the pptx."
+    },
+    "talking_point_sub": {
+      "path": "Teduh - General/Talking Point SUB - Podcast JPA 070426.pdf (also earlier version at 'Talking Point SUB/Talking Point SUB - Podcast JPA 060426.pdf')",
+      "note": "Nota percakapan for SUB (Setiausaha Bahagian Korporat) PSUK Selangor, for JPA podcast session on Program Semarakkan Inovasi Sektor Awam Tahun 2026. Authoritative for AINS/MPIPANS/MMKN/MyIPO/UiTM/SRIE/metaSEL/Hab metaSEL definitions, OTS commercialization history (MY-198326-A patent, Selgem Sdn. Bhd. licensing, SRIE 2023 pioneer product), and TEDUH details. Uses the abbreviated form 'Reformasi Sistem Tadbir Urus' for RSTU."
     },
     "innovasi_pack": {
       "path": "260412 - Innovasi/",
@@ -198,6 +203,88 @@
       "sourceDetail": "HAB metaSEL SPKB page lists 'Majlis Perbandaran Hulu Selangor' as the owner of SPKB. The abbreviation MPHS is used in HANDOFF.md lines 47, 63, 64 and in the SPKB doc context ('Jabatan Penguatkuasaan, MPHS')."
     },
     {
+      "acronym": "MMKN",
+      "longForm": "Majlis Mesyuarat Kerajaan Negeri Selangor Darul Ehsan",
+      "source": "talking_point_sub",
+      "sourceDetail": "Talking Point SUB PDF para 7: 'Majlis Mesyuarat Kerajaan Negeri Selangor Darul Ehsan (MMKN)'. Also para 15 for OTS RSTU approval in 2025.",
+      "notes": "The state-level executive council that approves government decisions. 'MMKN Ke 34/2025' in pptx slide 23 refers to the 34th MMKN meeting of 2025."
+    },
+    {
+      "acronym": "MyIPO",
+      "longForm": "Perbadanan Harta Intelek Malaysia",
+      "source": "talking_point_sub",
+      "sourceDetail": "Talking Point SUB PDF para 8: 'Perbadanan Harta Intelek Malaysia (MyIPO)'",
+      "notes": "Federal agency PSUK has a strategic MoU with, for innovation commercialization."
+    },
+    {
+      "acronym": "UiTM",
+      "longForm": "Universiti Teknologi MARA",
+      "source": "talking_point_sub",
+      "sourceDetail": "Talking Point SUB PDF para 8: 'Universiti Teknologi MARA (UiTM)'",
+      "notes": "Federal public university PSUK has a strategic MoU with, for innovation projects."
+    },
+    {
+      "acronym": "SRIE",
+      "longForm": "Selangor R&D and Innovation Expo",
+      "source": "talking_point_sub",
+      "sourceDetail": "Talking Point SUB PDF para 14: 'Selangor R&D and Innovation Expo 2023 (SRIE 2023)'",
+      "notes": "Annual state R&D and innovation exposition. OTS was officially named Produk Rintis Pengkomersilan Inovasi PSUK Selangor at SRIE 2023, launched by YAB Dato' Menteri Besar Selangor."
+    },
+    {
+      "acronym": "metaSEL",
+      "longForm": "Metamorfosis Selangor",
+      "source": "talking_point_sub",
+      "sourceDetail": "Talking Point SUB PDF para 9: 'agenda Metamorfosis Selangor (metaSEL)'",
+      "notes": "State-level digital transformation agenda. 'Hab metaSEL' is the physical/digital hub supporting this agenda. Exact casing: 'metaSEL' (lowercase m, uppercase SEL)."
+    },
+    {
+      "acronym": "Hab metaSEL",
+      "longForm": "Hab metaSEL (no acronym expansion)",
+      "source": "talking_point_sub",
+      "sourceDetail": "Talking Point SUB PDF para 9-11: 'Hab metaSEL merupakan sebuah inisiatif strategik... diwujudkan sebagai satu platform untuk menghimpun, menyelaras dan memperkasakan pelbagai produk inovasi, digital dan teknologi di Negeri Selangor'",
+      "notes": "NOT 'Hub Metasel'. Correct casing is 'Hab metaSEL'. Launched by PSUK in 2025. Hosts AINS and MPIPANS innovation products. Serves as digital pameran + pusat maklumat setempat."
+    },
+    {
+      "acronym": "AIPSA",
+      "longForm": "Anugerah Inovasi Perdana Sektor Awam",
+      "source": "talking_point_sub",
+      "sourceDetail": "Talking Point SUB PDF para 2: 'Anugerah Inovasi Perdana Sektor Awam (AIPSA) yang dilaksanakan oleh Kerajaan Persekutuan'",
+      "notes": "Federal equivalent of AINS. AINS-SA scoring aligned with AIPSA."
+    },
+    {
+      "acronym": "AINS-SA",
+      "longForm": "AINS Sektor Awam",
+      "source": "talking_point_sub",
+      "sourceDetail": "Talking Point SUB PDF para 2: 'AINS Sektor Awam (AINS-SA)' — kategori khas dengan 4 trek: sosial, ekonomi, infrastruktur, keselamatan & pentadbiran."
+    },
+    {
+      "acronym": "MPIPANS",
+      "longForm": "Majlis Persada Inovasi Perkhidmatan Awam Peringkat Negeri Selangor",
+      "source": "talking_point_sub",
+      "sourceDetail": "Talking Point SUB PDF para 4 header: 'MAJLIS PERSADA INOVASI PERKHIDMATAN AWAM PERINGKAT NEGERI SELANGOR (MPIPANS) TAHUN 2025'",
+      "notes": "UPDATE: the word 'PERINGKAT' is in the Talking Point SUB PDF but was omitted in the innovasi_pack LAPORAN FASTER MyMR doc. Use 'Majlis Persada Inovasi Perkhidmatan Awam Peringkat Negeri Selangor' as authoritative. Biennial innovation contest based on Kumpulan Inovatif dan Kreatif (KIK) Horizon Baharu format. 35 kumpulan inovasi participated in 2025."
+    },
+    {
+      "acronym": "SSAAS",
+      "longForm": "Sultan Salahuddin Abdul Aziz Shah",
+      "source": "innovasi_pack",
+      "sourceDetail": "HAB metaSEL SPKB page footer: 'Bangunan SSAAS, 40503 Shah Alam'. Also Talking Point SUB PDF para 14: 'Bangunan Sultan Salahuddin Abdul Aziz Shah'.",
+      "notes": "The main PSUK building in Shah Alam — where OTS was first installed in 2007."
+    },
+    {
+      "acronym": "MoU",
+      "longForm": "Memorandum of Understanding",
+      "source": "talking_point_sub",
+      "sourceDetail": "Talking Point SUB PDF para 8: 'menjalinkan kerjasama strategik melalui MoU'",
+      "notes": "Standard English abbreviation used in the doc without expansion."
+    },
+    {
+      "acronym": "IPT",
+      "longForm": "Institut Pengajian Tinggi",
+      "source": "talking_point_sub",
+      "sourceDetail": "Talking Point SUB PDF para 1: 'pelajar Institut Pengajian Tinggi (IPT)'"
+    },
+    {
       "acronym": "MBSA",
       "longForm": "Majlis Bandaraya Shah Alam",
       "source": "pptx",
@@ -287,8 +374,8 @@
     },
     {
       "acronym": "MMKN",
-      "reason": "Appears in pptx slide 23: 'MMKN Ke 34/2025', never expanded.",
-      "instruction": "Do NOT expand. Display acronym only."
+      "reason": "RESOLVED — now defined as Majlis Mesyuarat Kerajaan Negeri Selangor Darul Ehsan (Talking Point SUB PDF para 7).",
+      "instruction": "Moved to acronyms list."
     },
     {
       "acronym": "PBT",
@@ -337,6 +424,40 @@
     }
   ],
   "discrepancies": [
+    {
+      "type": "acronym",
+      "acronym": "RSTU",
+      "variants": [
+        {
+          "longForm": "Reformasi Sistem Penyampaian & Tadbir Urus Negeri Selangor",
+          "source": "pptx slide 1 cover image, SLAID PDF page 1 cover",
+          "status": "AUTHORITATIVE (latest)"
+        },
+        {
+          "longForm": "Reformasi Sistem Tadbir Urus",
+          "source": "Talking Point SUB PDF para 6 ('Reformasi Sistem Tadbir Urus (RSTU)'), remotion-video/src/theme.ts:58",
+          "status": "OUTDATED abbreviated form — do not use"
+        }
+      ],
+      "resolution": "Per user directive 'For RSTU itself, the latest name is as per the pptx slides', use full form 'Reformasi Sistem Penyampaian & Tadbir Urus Negeri Selangor'. The Talking Point SUB PDF uses an older abbreviated form that drops 'Penyampaian' — this must be corrected in the remotion voiceover script and theme.ts."
+    },
+    {
+      "type": "acronym",
+      "acronym": "MPIPANS",
+      "variants": [
+        {
+          "longForm": "Majlis Persada Inovasi Perkhidmatan Awam Peringkat Negeri Selangor",
+          "source": "Talking Point SUB PDF para 4 header",
+          "status": "AUTHORITATIVE"
+        },
+        {
+          "longForm": "Majlis Persada Inovasi Perkhidmatan Awam Negeri Selangor",
+          "source": "innovasi_pack LAPORAN FASTER MyMR.pdf page 1",
+          "status": "VARIANT — missing 'Peringkat'"
+        }
+      ],
+      "resolution": "Use 'Majlis Persada Inovasi Perkhidmatan Awam Peringkat Negeri Selangor' (includes PERINGKAT) per Talking Point SUB authoritative definition."
+    },
     {
       "type": "acronym",
       "acronym": "OTS",

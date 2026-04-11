@@ -141,7 +141,15 @@ const products = {
       { name: 'Majlis Bandaraya Diraja Klang', short: 'MBDK' },
     ],
     desc: 'OTS ialah produk yang bertindak sebagai Sistem Perlindungan Sekunder untuk menghentikan limpahan air sekiranya Sistem Pam Air Bangunan, penderia atau pelampung gagal berfungsi, atau disebabkan oleh kesilapan manusia. OTS akan memantau secara automatik (24 jam) dan status boleh disemak melalui aplikasi telefon pintar tanpa perlu ke lokasi pemasangan. OTS juga sesuai diimplementasi pada sistem air domestik, pencegah kebakaran dan pendingin hawa.',
-    masalah: 'Limpahan air daripada tangki bangunan kerap berlaku apabila sistem pam/penderia/pelampung gagal berfungsi atau berlaku kesilapan manusia — menyebabkan pembaziran air dan kerosakan harta benda.',
+    masalah: 'Limpahan air daripada tangki bangunan boleh menyebabkan kerosakan siling, permaidani, peralatan elektrik, perabot dan dokumen penting — sekali gus mengakibatkan kos pembaikan yang tinggi dan menjejaskan perkhidmatan jabatan atau transaksi perniagaan.',
+    sejarah: [
+      { tahun: '2007', event: 'OTS mula dipasang di Bangunan Sultan Salahuddin Abdul Aziz Shah (SSAAS)' },
+      { tahun: '2007+', event: 'Dikembangkan ke Dewan Jubli Perak Sultan Abdul Aziz dan Bangunan Annex Dewan Negeri Selangor (Wisma Dewan Negeri Selangor)' },
+      { tahun: '2018', event: 'Didaftarkan sebagai harta intelek — Paten Utiliti MY-198326-A' },
+      { tahun: '2023', event: 'Diangkat sebagai Produk Rintis Pengkomersilan Inovasi PSUK Selangor; dirasmikan oleh YAB Dato\' Menteri Besar Selangor di Selangor R&D and Innovation Expo 2023 (SRIE 2023)' },
+      { tahun: '2023+', event: 'Perjanjian perlesenan dengan Selgem Sdn. Bhd. untuk pengkomersialan' },
+      { tahun: '2025', event: 'MMKN meluluskan pengembangan OTS melalui inisiatif RSTU — Fasa Satu ke MBSA, MBPJ, MBSJ, MBDK' },
+    ],
     aplikasi: [
       { label: 'Sistem Air Domestik', desc: 'Tangki air kediaman & premis komersial' },
       { label: 'Pencegah Kebakaran', desc: 'Sistem sprinkler & tangki simpanan air bomba' },
@@ -155,16 +163,17 @@ const products = {
       'Sesuai untuk sistem air domestik, pencegah kebakaran & pendingin hawa',
     ],
     stats: [
-      { value: '2007', label: 'Tahun penciptaan' },
-      { value: '7', label: 'Anugerah antarabangsa & nasional' },
+      { value: '2007', label: 'Tahun pemasangan pertama (SSAAS)' },
+      { value: '7+', label: 'Anugerah antarabangsa & nasional' },
     ],
     meta: {
       'Bidang Inovasi': 'Sosial',
       'Tema': 'Teknologi, Produk & Peralatan',
-      'Harta Intelek': 'Inovasi Utiliti (Utility Innovation)',
+      'Harta Intelek': 'Paten Utiliti MY-198326-A (2018)',
       'Punca Kewangan': 'Akaun Amanah',
-      'Pengkomersialan': 'Aktif',
-      'Kategori Penyertaan': 'Produk Inovasi',
+      'Status Pengkomersialan': 'Aktif',
+      'Syarikat Perlesenan': 'Selgem Sdn. Bhd.',
+      'Produk Rintis': 'Pengkomersilan Inovasi PSUK Selangor (SRIE 2023)',
     },
     ketua: 'Tc. Norhisham bin Mamat @ Zakaria',
     video: 'https://ls.selangor.my/Tu31cF',
@@ -177,7 +186,7 @@ const products = {
       'Best Of The Best Award — SIRIM Si2Te 2019',
       'Innovation Commercialization Pioneer Product — Selangor State Secretary Office',
     ],
-    tags: ['Projek SUK Sendiri', 'Paten Utiliti', '7 Anugerah'],
+    tags: ['Projek SUK Sendiri', 'Paten MY-198326-A', 'SRIE 2023', 'Selgem Sdn. Bhd.'],
   },
 }
 
@@ -284,6 +293,24 @@ export default function ProdukDetail() {
             <div className="bg-rstu-cream/60 rounded-2xl p-4 border border-rstu-gold/15">
               <SectionLabel>Masalah / Latar Belakang</SectionLabel>
               <p className="text-xs text-gray-700 mt-3 leading-relaxed">{p.masalah}</p>
+            </div>
+          )}
+
+          {/* Sejarah / Timeline (OTS) */}
+          {p.sejarah && (
+            <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+              <SectionLabel>Sejarah & Pengkomersialan</SectionLabel>
+              <div className="flex flex-col gap-2.5 mt-3 relative">
+                <div className="absolute left-[22px] top-2 bottom-2 w-0.5 bg-gradient-to-b from-rstu-gold via-rstu-yellow to-rstu-gold opacity-40" />
+                {p.sejarah.map((s, i) => (
+                  <div key={i} className="flex items-start gap-3 relative z-10">
+                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 bg-gradient-to-br ${accentBg} shadow-sm`}>
+                      <span className="text-[10px] font-black text-white leading-tight text-center">{s.tahun}</span>
+                    </div>
+                    <p className="text-[11px] text-gray-700 leading-snug flex-1 pt-1.5">{s.event}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
 
