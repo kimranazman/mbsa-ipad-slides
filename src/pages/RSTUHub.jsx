@@ -1,54 +1,39 @@
 import { Link } from 'react-router-dom'
 import { BackButton, Footer } from '../components/SlideShow'
-import { IconChart, IconWarning, IconTarget, IconLayers, IconHeart, IconStar, IconChevron } from '../components/Icons'
+import {
+  IconChart,
+  IconWarning,
+  IconTarget,
+  IconLayers,
+  IconHeart,
+  IconStar,
+  IconShield,
+  IconChevron,
+  IconCompass,
+  IconGrid,
+  IconFlag,
+  IconClipboard,
+} from '../components/Icons'
 
-const topics = [
-  {
-    id: 'ekonomi',
-    title: 'Ekonomi Selangor',
-    highlight: '26.2%',
-    desc: 'Sumbangan KDNK tertinggi',
-    Icon: IconChart,
-    accent: true,
-  },
-  {
-    id: 'cabaran',
-    title: '7 Cabaran Utama',
-    highlight: '7',
-    desc: 'Perkhidmatan Awam',
-    Icon: IconWarning,
-  },
-  {
-    id: 'objektif',
-    title: '5 Objektif RSTU',
-    highlight: '5',
-    desc: 'Hala tuju reformasi',
-    Icon: IconTarget,
-    accent: true,
-  },
-  {
-    id: 'kerangka',
-    title: 'Kerangka RSTU',
-    highlight: '2025',
-    desc: 'Framework 2025-2027',
-    Icon: IconLayers,
-  },
-  {
-    id: 'ehsan',
-    title: 'Nilai E.H.S.A.N',
-    highlight: '5',
-    desc: 'Nilai teras reformasi',
-    Icon: IconHeart,
-  },
-  {
-    id: 'hemat',
-    title: 'Nilai H.E.M.A.T',
-    highlight: '5',
-    desc: 'Nilai penjawat awam',
-    Icon: IconStar,
-    accent: true,
-  },
+const baseTopics = [
+  { id: 'ekonomi', title: 'Ekonomi Selangor', highlight: '26.2%', desc: 'Sumbangan KDNK tertinggi', Icon: IconChart },
+  { id: 'kerangka', title: 'Kerangka RSTU', highlight: '2025', desc: 'Framework 2025-2027', Icon: IconLayers },
+  { id: 'cabaran', title: 'Cabaran Selangor', highlight: '6', desc: 'Status semasa (AS-IS)', Icon: IconWarning },
+  { id: 'objektif', title: '5 Objektif RSTU', highlight: '5', desc: 'Hala tuju reformasi', Icon: IconTarget },
+  { id: 'fokus', title: '8 Fokus Strategik', highlight: '8', desc: 'FS 1 hingga FS 8', Icon: IconCompass },
+  { id: 'elemen', title: '4 Elemen RSTU', highlight: '4', desc: 'Dimensi pembaharuan', Icon: IconGrid },
+  { id: 'ehsan', title: 'Nilai E.H.S.A.N', highlight: '5', desc: 'Nilai teras RSTU', Icon: IconHeart },
+  { id: 'hemat', title: 'Nilai H.E.M.A.T', highlight: '5', desc: 'Nilai penjawat awam', Icon: IconStar },
+  { id: 'ikrar', title: 'Hala Tuju & Ikrar', highlight: '5', desc: 'Budaya kerja baharu', Icon: IconFlag },
+  { id: 'indeks', title: '4 Indeks Utama', highlight: '4', desc: 'Pengukuran reformasi', Icon: IconChart },
+  { id: 'status', title: 'Status Pelaksanaan', highlight: 'ARPA', desc: '2025 & 2026 projek', Icon: IconClipboard },
 ]
+
+/* checkerboard accent for 2-column grid */
+const topics = baseTopics.map((t, i) => ({
+  ...t,
+  accent: (Math.floor(i / 2) + (i % 2)) % 2 === 0,
+}))
 
 export default function RSTUHub() {
   return (
@@ -60,10 +45,14 @@ export default function RSTUHub() {
       <div className="px-6 pt-5 pb-1 flex-shrink-0">
         <BackButton to="/" />
       </div>
-      <div className="px-6 pb-5 flex-shrink-0">
-        <span className="badge-gold">Reformasi</span>
+      <div className="px-6 pb-4 flex-shrink-0">
+        <span className="badge-gold">Sesi Libat Urus</span>
         <h1 className="text-3xl font-black text-gray-900 mt-2">RSTU Negeri Selangor</h1>
         <p className="text-sm text-gray-500 mt-1">Reformasi Sistem Penyampaian & Tadbir Urus</p>
+        <div className="inline-flex items-center gap-1.5 mt-2 bg-gradient-to-r from-rstu-red to-rstu-dark text-white rounded-full px-3 py-1 text-[11px] font-bold italic">
+          <IconShield size={12} />
+          Reformasi Satu Kemestian
+        </div>
       </div>
 
       {/* Cards Grid */}
@@ -73,7 +62,7 @@ export default function RSTUHub() {
             <Link
               key={t.id}
               to={`/rstu/${t.id}`}
-              className="tap block bg-white rounded-2xl no-underline shadow-sm border border-gray-100 flex flex-col min-h-[160px] relative overflow-hidden"
+              className="tap block bg-white rounded-2xl no-underline shadow-sm border border-gray-100 flex flex-col min-h-[150px] relative overflow-hidden"
             >
               {/* Right edge accent strip */}
               <div className={`absolute top-0 right-0 w-1 h-full rounded-r-2xl ${

@@ -156,3 +156,61 @@ export function IconCheck({ size = 16, className = '' }) {
     </svg>
   )
 }
+
+export function IconCompass({ size = 24, className = '' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
+      <path d="M15.5 8.5L13.5 13.5L8.5 15.5L10.5 10.5L15.5 8.5Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
+      <circle cx="12" cy="12" r="1" fill="currentColor"/>
+    </svg>
+  )
+}
+
+export function IconGrid({ size = 24, className = '' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
+      <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="2"/>
+      <rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="2"/>
+      <rect x="3" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="2"/>
+      <rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="2"/>
+      <circle cx="7" cy="7" r="1" fill="currentColor" opacity="0.4"/>
+      <circle cx="17" cy="7" r="1" fill="currentColor" opacity="0.4"/>
+      <circle cx="7" cy="17" r="1" fill="currentColor" opacity="0.4"/>
+      <circle cx="17" cy="17" r="1" fill="currentColor" opacity="0.4"/>
+    </svg>
+  )
+}
+
+export function IconFlag({ size = 24, className = '' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
+      <path d="M5 22V3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M5 4H18L16 8L18 12H5" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
+      <path d="M5 4H18L16 8L18 12H5" fill="currentColor" opacity="0.15"/>
+    </svg>
+  )
+}
+
+export function IconClipboard({ size = 24, className = '' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
+      <rect x="5" y="4" width="14" height="18" rx="2" stroke="currentColor" strokeWidth="2"/>
+      <rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity="0.1"/>
+      <path d="M8 11L10 13L14 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M8 17H14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity="0.5"/>
+    </svg>
+  )
+}
+
+export function IconHierarchy({ size = 24, className = '' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
+      <rect x="9" y="2" width="6" height="4" rx="1" stroke="currentColor" strokeWidth="2"/>
+      <rect x="2" y="14" width="6" height="4" rx="1" stroke="currentColor" strokeWidth="2"/>
+      <rect x="9" y="14" width="6" height="4" rx="1" stroke="currentColor" strokeWidth="2"/>
+      <rect x="16" y="14" width="6" height="4" rx="1" stroke="currentColor" strokeWidth="2"/>
+      <path d="M12 6V10M5 10H19M5 10V14M12 10V14M19 10V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    </svg>
+  )
+}

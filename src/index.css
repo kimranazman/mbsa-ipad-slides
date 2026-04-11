@@ -116,6 +116,12 @@ html, body, #root {
 .stagger-pop > *:nth-child(4) { animation-delay: 0.20s; }
 .stagger-pop > *:nth-child(5) { animation-delay: 0.25s; }
 .stagger-pop > *:nth-child(6) { animation-delay: 0.30s; }
+.stagger-pop > *:nth-child(7) { animation-delay: 0.35s; }
+.stagger-pop > *:nth-child(8) { animation-delay: 0.40s; }
+.stagger-pop > *:nth-child(9) { animation-delay: 0.45s; }
+.stagger-pop > *:nth-child(10) { animation-delay: 0.50s; }
+.stagger-pop > *:nth-child(11) { animation-delay: 0.55s; }
+.stagger-pop > *:nth-child(12) { animation-delay: 0.60s; }
 
 /* Tap effect */
 .tap {

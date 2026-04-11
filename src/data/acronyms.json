@@ -1,0 +1,423 @@
+{
+  "description": "Single source of truth for acronyms used in the RSTU iPad slides webapp. Long-forms MUST originate from a client source below. Never add expansions based on assumption.",
+  "generatedAt": "2026-04-12",
+  "authoritativeOrder": [
+    "pptx",
+    "slaid_pdf",
+    "innovasi_pack",
+    "handoff"
+  ],
+  "sources": {
+    "pptx": {
+      "path": "Slide points for RSTU from client/Presentation RSTU 14 April 2026 - Program Semarakkan Inovasi.pptx",
+      "note": "Client's primary RSTU deck for the 14 April 2026 event. Authoritative for RSTU branding and current product names. 25 slides."
+    },
+    "slaid_pdf": {
+      "path": "RSTU/SLAID RSTU SS.pdf",
+      "note": "Earlier RSTU briefing deck, authored by Saiful Azri via Canva, dated 3 August 2025. 18 pages. Official client source. Contains detailed H.E.M.A.T values and KPPA/PKSN source citations not present in the pptx."
+    },
+    "innovasi_pack": {
+      "path": "260412 - Innovasi/",
+      "note": "Client-provided product-specific PDFs delivered 2026-04-12. Contains HAB metaSEL portal pages for SPKB/MyMR/OTS, the ABT Tracker inovasi report from PDT Petaling, EMC OTS product sheet, and the MyMR FASTER MPIPANS 2025 report. Authoritative for detailed product descriptions and group names."
+    },
+    "handoff": {
+      "path": "HANDOFF.md",
+      "note": "Internal production handoff doc. Contains client-verified product name corrections (e.g. STKB → SPKB). Secondary source for acronym pairings where pptx/pdf are silent."
+    }
+  },
+  "sourcesExcluded": {
+    "event_master": {
+      "path": "EVENT-MASTER.md",
+      "reason": "Derived from a Whisper transcript of meeting audio. Not authoritative — transcription errors possible (e.g. 'Overflow Triple System' is wrong; pptx says 'Overflow Tripping System'). Any acronym expansion that appears only in EVENT-MASTER.md must NOT be treated as a client source."
+    }
+  },
+  "acronyms": [
+    {
+      "acronym": "RSTU",
+      "longForm": "Reformasi Sistem Penyampaian & Tadbir Urus Negeri Selangor",
+      "source": "pptx",
+      "sourceDetail": "Slide 1 cover image, Slide 15 Kerangka framework",
+      "notes": "Latest authoritative name per pptx. Also confirmed in SLAID PDF page 1 cover and page 17 org chart."
+    },
+    {
+      "acronym": "PACU",
+      "longForm": "Unit Penyelarasan Lonjakan Prestasi",
+      "source": "pptx",
+      "sourceDetail": "Slide 2 (Punca Kuasa Pelaksanaan)"
+    },
+    {
+      "acronym": "MPC",
+      "longForm": "Perbadanan Produktiviti Malaysia",
+      "source": "pptx",
+      "sourceDetail": "Slide 2 (Punca Kuasa Pelaksanaan)"
+    },
+    {
+      "acronym": "JPA",
+      "longForm": "Jabatan Perkhidmatan Awam",
+      "source": "pptx",
+      "sourceDetail": "Slide 2 (Punca Kuasa Pelaksanaan)",
+      "notes": "Appears twice in slide 2 hierarchy (federal and state level)."
+    },
+    {
+      "acronym": "KSN",
+      "longForm": "Ketua Setiausaha Negara",
+      "source": "slaid_pdf",
+      "sourceDetail": "Derived from PKSN expansion on page 8 ('Sumber: Pejabat Ketua Setiausaha Negara (PKSN)')",
+      "notes": "KSN itself not literally defined; derived from PKSN = Pejabat + Ketua Setiausaha Negara."
+    },
+    {
+      "acronym": "KPPA",
+      "longForm": "Ketua Pengarah Perkhidmatan Awam",
+      "source": "slaid_pdf",
+      "sourceDetail": "Page 9 HEMAT slide source line: 'Sumber: Ketua Pengarah Perkhidmatan Awam (KPPA)'"
+    },
+    {
+      "acronym": "PKSN",
+      "longForm": "Pejabat Ketua Setiausaha Negara",
+      "source": "slaid_pdf",
+      "sourceDetail": "Page 8 Agenda Reformasi source line: 'Sumber: Pejabat Ketua Setiausaha Negara (PKSN)'"
+    },
+    {
+      "acronym": "SIAP",
+      "longForm": "Cawangan Pengurusan Strategik",
+      "source": "pptx",
+      "sourceDetail": "Slide 7 FS 7: 'diterajui oleh Cawangan Pengurusan Strategik (SIAP)'",
+      "notes": "Only the acronym-to-name mapping is given; letters not further decomposed."
+    },
+    {
+      "acronym": "RKB",
+      "longForm": "Reformasi Kerenah Birokrasi",
+      "source": "slaid_pdf",
+      "sourceDetail": "Page 17 org chart: 'KPI Reformasi Kerenah Birokrasi (RKB)'",
+      "notes": "Also visible on the RKB 2025 compilation cover page image bundled with the pptx (image18.png)."
+    },
+    {
+      "acronym": "SKR",
+      "longForm": "Strategi Keberhasilan Reformasi",
+      "source": "slaid_pdf",
+      "sourceDetail": "Page 17 org chart: 'Strategi Keberhasilan Reformasi (SKR) RSTU'. Also labelled in Kerangka frame pages 11 and image5.png."
+    },
+    {
+      "acronym": "RS",
+      "longForm": "Rancangan Selangor",
+      "source": "slaid_pdf",
+      "sourceDetail": "Page 11 Kerangka top row: 'Rancangan Selangor (RS-1 & RS-2)'",
+      "notes": "Used in RS-1 and RS-2 state planning contexts. Not referenced in the pptx."
+    },
+    {
+      "acronym": "H.E.M.A.T",
+      "longForm": "Hijrah Tatakelola, Empati Rakyat, Minda Pekin, Apresiasi Inovasi, Telus Tadbiran",
+      "source": "slaid_pdf",
+      "sourceDetail": "Page 9 'NILAI-NILAI PENJAWAT AWAM — H.E.M.A.T', sourced from Ketua Pengarah Perkhidmatan Awam (KPPA)",
+      "notes": "Official JPA framework for values of public servants. Each letter has a detailed description on page 9."
+    },
+    {
+      "acronym": "E.H.S.A.N",
+      "longForm": "Empati, Holistik, Sinergi, Akauntabiliti, Neutraliti",
+      "source": "pptx",
+      "sourceDetail": "Slide 15 Kerangka framework image (image5.png) 'Nilai' row. Also detailed on SLAID page 12.",
+      "notes": "RSTU reform values framework."
+    },
+    {
+      "acronym": "SPKB",
+      "longForm": "Sistem Penguatkuasaan Bersepadu",
+      "source": "pptx",
+      "sourceDetail": "Slide 23: 'Sistem Penguatkuasaan Bersepadu (SPKB)'. Also confirmed in innovasi_pack HAB metaSEL SPKB page, HANDOFF.md line 47.",
+      "notes": "Owned by Majlis Perbandaran Hulu Selangor, Jabatan Penguatkuasaan. Group: ASPIRE. Previously called STKB in draft materials (deprecated)."
+    },
+    {
+      "acronym": "OTS",
+      "longForm": "Overflow Tripping System",
+      "source": "pptx",
+      "sourceDetail": "Slide 24: 'Overflow Tripping System (OTS)'. Also confirmed in innovasi_pack HAB metaSEL OTS page and EMC OTS product sheet.",
+      "notes": "Owned by Pejabat Setiausaha Kerajaan Negeri Selangor. Group: EMC. Created 2007. See discrepancies section — EVENT-MASTER.md has the wrong expansion 'Overflow Triple System' but that doc is not a client source."
+    },
+    {
+      "acronym": "ABT",
+      "longForm": "Akaun Belum Terima",
+      "source": "innovasi_pack",
+      "sourceDetail": "ABT Tracker - PDT Petaling.pdf page 3 section 3.3: 'Akaun Belum Terima (ABT) ialah satu amaun yang sepatutnya diterima tetapi belum diterima oleh Kerajaan'",
+      "notes": "Financial/accounting term for receivables. ABT Tracker is a GIS-based tool to identify overdue tax locations. Group: TAXPERT SQUAD."
+    },
+    {
+      "acronym": "MR",
+      "longForm": "Minor Repair",
+      "source": "innovasi_pack",
+      "sourceDetail": "LAPORAN FASTER - MY MR.pdf: 'Permit Kerja Kecil (Minor Repair - MR)'. Also in HAB metaSEL MyMR page.",
+      "notes": "MyMR is the online application system for MR permits. Group: FASTER. The LAPORAN FASTER doc also uses 'Minor Renovation/Repair' interchangeably."
+    },
+    {
+      "acronym": "KIK",
+      "longForm": "Kumpulan Inovatif dan Kreatif",
+      "source": "innovasi_pack",
+      "sourceDetail": "ABT Tracker - PDT Petaling.pdf page 2 section 3.2: 'Kumpulan Inovatif dan Kreatif (KIK) Pejabat Daerah dan Tanah Petaling'"
+    },
+    {
+      "acronym": "MPIPANS",
+      "longForm": "Majlis Persada Inovasi Perkhidmatan Awam Negeri Selangor",
+      "source": "innovasi_pack",
+      "sourceDetail": "LAPORAN FASTER - MY MR.pdf page 1: 'MAJLIS PERSADA INOVASI PERKHIDMATAN AWAM NEGERI SELANGOR TAHUN 2025'",
+      "notes": "Annual state-level public service innovation council/event. MyMR won Naib Johan (Runner-up) in the Inovasi Penyampaian Perkhidmatan (Penambahbaikan) category 2025."
+    },
+    {
+      "acronym": "AINS",
+      "longForm": "Anugerah Inovasi Negeri Selangor",
+      "source": "innovasi_pack",
+      "sourceDetail": "Referenced in all HAB metaSEL portal pages footer: 'Keputusan AINS'. SPKB was submitted under 'ains' kategori penyertaan.",
+      "notes": "Annual state-level innovation award."
+    },
+    {
+      "acronym": "GIS",
+      "longForm": "Geographic Information System",
+      "source": "innovasi_pack",
+      "sourceDetail": "ABT Tracker - PDT Petaling.pdf page 3: 'kaedah GIS (Geographic Information System)'",
+      "notes": "ABT Tracker is built on GIS (using Mapinfo and QGIS software)."
+    },
+    {
+      "acronym": "KPKT",
+      "longForm": "Kementerian Perumahan dan Kerajaan Tempatan",
+      "source": "innovasi_pack",
+      "sourceDetail": "LAPORAN FASTER - MY MR.pdf: 'KEMENTERIAN PERUMAHAN DAN KERAJAAN TEMPATAN (KPKT)'"
+    },
+    {
+      "acronym": "RMK-12",
+      "longForm": "Rancangan Malaysia Ke-12",
+      "source": "innovasi_pack",
+      "sourceDetail": "LAPORAN FASTER - MY MR.pdf ringkasan eksekutif: 'Sejajar dengan Fokus Rancangan Malaysia Ke-12 (RMK-12)'"
+    },
+    {
+      "acronym": "WPK",
+      "longForm": "Wang Pendahuluan Kontraktor",
+      "source": "innovasi_pack",
+      "sourceDetail": "ABT Tracker - PDT Petaling.pdf page 3 figure 1: 'ABT Wang Pendahuluan Kontraktor (WPK)'"
+    },
+    {
+      "acronym": "MPHS",
+      "longForm": "Majlis Perbandaran Hulu Selangor",
+      "source": "innovasi_pack",
+      "sourceDetail": "HAB metaSEL SPKB page lists 'Majlis Perbandaran Hulu Selangor' as the owner of SPKB. The abbreviation MPHS is used in HANDOFF.md lines 47, 63, 64 and in the SPKB doc context ('Jabatan Penguatkuasaan, MPHS')."
+    },
+    {
+      "acronym": "MBSA",
+      "longForm": "Majlis Bandaraya Shah Alam",
+      "source": "pptx",
+      "sourceDetail": "Slide 24 (OTS agensi pelaksana: 'Majlis Bandaraya Shah Alam')"
+    },
+    {
+      "acronym": "MBPJ",
+      "longForm": "Majlis Bandaraya Petaling Jaya",
+      "source": "pptx",
+      "sourceDetail": "Slide 24 (OTS agensi pelaksana)"
+    },
+    {
+      "acronym": "MBSJ",
+      "longForm": "Majlis Bandaraya Subang Jaya",
+      "source": "pptx",
+      "sourceDetail": "Slide 24 (OTS agensi pelaksana)"
+    },
+    {
+      "acronym": "MBDK",
+      "longForm": "Majlis Bandaraya Diraja Klang",
+      "source": "pptx",
+      "sourceDetail": "Slide 24 (OTS agensi pelaksana)"
+    },
+    {
+      "acronym": "MPKS",
+      "longForm": "Majlis Perbandaran Kuala Selangor",
+      "source": "handoff",
+      "sourceDetail": "HANDOFF.md line 63",
+      "notes": "pptx slide 23 uses the full name."
+    },
+    {
+      "acronym": "MDSB",
+      "longForm": "Majlis Daerah Sabak Bernam",
+      "source": "handoff",
+      "sourceDetail": "HANDOFF.md line 63",
+      "notes": "pptx slide 23 uses the full name."
+    },
+    {
+      "acronym": "MPSp",
+      "longForm": "Majlis Perbandaran Sepang",
+      "source": "handoff",
+      "sourceDetail": "HANDOFF.md line 64",
+      "notes": "pptx slide 23 uses the full name. HANDOFF uses 'MPSp' (lower-case p) to avoid conflict with MPS (Selayang)."
+    },
+    {
+      "acronym": "MPKL",
+      "longForm": "Majlis Perbandaran Kuala Langat",
+      "source": "handoff",
+      "sourceDetail": "HANDOFF.md line 64"
+    },
+    {
+      "acronym": "MPS",
+      "longForm": "Majlis Perbandaran Selayang",
+      "source": "handoff",
+      "sourceDetail": "HANDOFF.md line 64 (MyMR pelaksana list)",
+      "notes": "pptx slide 23 uses the full name 'Majlis Perbandaran Selayang'."
+    },
+    {
+      "acronym": "PDT",
+      "longForm": "Pejabat Daerah Dan Tanah",
+      "source": "pptx",
+      "sourceDetail": "Slide 24: 'Pejabat Daerah Dan Tanah Petaling', 'Pejabat Daerah Dan Tanah Klang', etc."
+    },
+    {
+      "acronym": "PSUK",
+      "longForm": "Pejabat Setiausaha Kerajaan Negeri Selangor",
+      "source": "pptx",
+      "sourceDetail": "Slide 24 uses full name 'Pejabat Setiausaha Kerajaan Negeri Selangor' as OTS lead agency; Slide 25 uses 'PSUK' as the agency-bucket column header.",
+      "notes": "PSUK short form is not literally defined as 'PSUK = ...' but the mapping is unambiguous from slides 24-25 pairing."
+    }
+  ],
+  "undefined": [
+    {
+      "acronym": "ARPA",
+      "reason": "Appears in pptx slides 2, 20-24 as a product name, and in HANDOFF.md line 181, but never expanded in any client source.",
+      "instruction": "Do NOT expand. Display acronym only."
+    },
+    {
+      "acronym": "ILTIZAM",
+      "reason": "Listed as a Produk Reformasi in pptx slide 2 alongside ARPA/RKB/H.E.M.A.T/RSTU, and appears in SLAID page 11 kerangka top row, but never expanded.",
+      "instruction": "Do NOT expand. Display acronym only."
+    },
+    {
+      "acronym": "KPPA",
+      "reason": "RESOLVED — now defined as Ketua Pengarah Perkhidmatan Awam (see acronyms list, sourced from SLAID page 9).",
+      "instruction": "Moved to acronyms list."
+    },
+    {
+      "acronym": "MMKN",
+      "reason": "Appears in pptx slide 23: 'MMKN Ke 34/2025', never expanded.",
+      "instruction": "Do NOT expand. Display acronym only."
+    },
+    {
+      "acronym": "PBT",
+      "reason": "Used throughout pptx slide 25 and HANDOFF.md, never formally expanded in client sources.",
+      "instruction": "Do NOT expand. Display acronym only."
+    },
+    {
+      "acronym": "MyMR",
+      "reason": "RESOLVED — MR is now defined as Minor Repair (innovasi_pack, LAPORAN FASTER - MY MR.pdf). MyMR reads as 'My' + 'MR' = 'My Minor Repair'. See 'MR' entry in acronyms list.",
+      "instruction": "Display as 'MyMR' (prefix 'My' is app branding, not an acronym)."
+    },
+    {
+      "acronym": "ABT",
+      "reason": "RESOLVED — ABT = Akaun Belum Terima (innovasi_pack, ABT Tracker - PDT Petaling.pdf). See acronyms list.",
+      "instruction": "Moved to acronyms list."
+    },
+    {
+      "acronym": "SUK",
+      "reason": "Used as 'SUK Selangor' in pptx slide 2. Setiausaha Kerajaan is implied (PSUK = Pejabat Setiausaha Kerajaan) but SUK on its own is not formally expanded.",
+      "instruction": "Display as 'SUK Selangor' without expansion."
+    },
+    {
+      "acronym": "FS",
+      "reason": "Used as 'FS 1' through 'FS 8' for the 8 Fokus Strategik in pptx slides 4–7. Stands for Fokus Strategik (implied by section header 'FOKUS STRATEGIK RSTU') but not formally defined as 'FS = Fokus Strategik'.",
+      "instruction": "Display as 'FS 1..8'. Title 'Fokus Strategik' is the slide section header."
+    },
+    {
+      "acronym": "TSUK",
+      "reason": "Used in SLAID PDF page 17 org chart as 'TSUK (Pengurusan)'. Not expanded in the slide.",
+      "instruction": "Do NOT expand. Display as 'TSUK (Pengurusan)' in org-chart contexts only."
+    },
+    {
+      "acronym": "SRI",
+      "reason": "Used in SLAID PDF pages 14, 16 as 'Indeks SRI' and 'Laporan SRI Selangor 2025'. Not expanded.",
+      "instruction": "Do NOT expand. Only appears in PDF survey results section not currently shown in the webapp."
+    },
+    {
+      "acronym": "SISPAA",
+      "reason": "Used in SLAID PDF page 6 as 'SISPAA Selangor'. Not expanded in the slide.",
+      "instruction": "Do NOT expand. Only appears in PDF stats section not currently shown in the webapp."
+    },
+    {
+      "acronym": "HOD",
+      "reason": "Used in SLAID PDF page 13 as 'Ketua Jabatan (HOD)'. This is an English abbreviation, not a Malay acronym.",
+      "instruction": "If needed, display as 'HOD (Head of Department)' or 'Ketua Jabatan'."
+    }
+  ],
+  "discrepancies": [
+    {
+      "type": "acronym",
+      "acronym": "OTS",
+      "variants": [
+        {
+          "longForm": "Overflow Tripping System",
+          "source": "pptx slide 24",
+          "status": "AUTHORITATIVE"
+        },
+        {
+          "longForm": "Overflow Triple System",
+          "source": "EVENT-MASTER.md line 27 (Whisper-transcribed meeting audio)",
+          "status": "INCORRECT — not a client source"
+        }
+      ],
+      "resolution": "Use 'Overflow Tripping System' per pptx slide 24."
+    },
+    {
+      "type": "acronym",
+      "acronym": "SPKB",
+      "variants": [
+        {
+          "longForm": "Sistem Penguatkuasaan Bersepadu",
+          "source": "pptx slide 23, HANDOFF.md line 47",
+          "status": "AUTHORITATIVE"
+        },
+        {
+          "longForm": "STKB (no expansion)",
+          "source": "EVENT-MASTER.md lines 76, 99",
+          "status": "DEPRECATED — old/draft name, struck through in HANDOFF.md line 47"
+        }
+      ],
+      "resolution": "Use 'SPKB' / 'Sistem Penguatkuasaan Bersepadu'."
+    },
+    {
+      "type": "spelling",
+      "acronym": "Indeks Governan",
+      "variants": [
+        {
+          "longForm": "Indeks Governan",
+          "source": "pptx slide 13 image (4 Indeks Pengukuran Utama)",
+          "status": "AUTHORITATIVE"
+        },
+        {
+          "longForm": "Indeks Governans",
+          "source": "standard Malay spelling convention",
+          "status": "DO NOT USE"
+        }
+      ],
+      "resolution": "Match slide 13 exactly: 'Indeks Governan' (no trailing 's')."
+    },
+    {
+      "type": "content",
+      "topic": "Cabaran Perkhidmatan Awam",
+      "variants": [
+        {
+          "content": "7 Cabaran Utama Perkhidmatan Awam (Malaysia-wide public service)",
+          "source": "SLAID PDF page 5"
+        },
+        {
+          "content": "6 Cabaran Selangor (AS-IS): Tadbir Urus, Digitalisasi, Budaya Silo, Output vs Outcome, Aduan Rakyat, Imej & Kepercayaan",
+          "source": "pptx slide 9 (image9.png)",
+          "status": "AUTHORITATIVE for webapp"
+        }
+      ],
+      "resolution": "Webapp uses the 6 Selangor-specific cabaran from pptx slide 9 (the current AS-IS snapshot). The 7 generic cabaran from SLAID page 5 is an older framing."
+    },
+    {
+      "type": "content",
+      "topic": "Ekonomi Selangor (KDNK 26.2%, RM 432.1 bilion)",
+      "variants": [
+        {
+          "content": "Sumbangan KDNK Selangor 26.2%, RM 432.1 Bilion (2024), Sasaran Hasil RM3 Bilion (2025)",
+          "source": "SLAID PDF pages 2-3"
+        },
+        {
+          "content": "Not mentioned",
+          "source": "pptx"
+        }
+      ],
+      "resolution": "Currently omitted from webapp because pptx drives the structure. The data IS client-sourced (SLAID PDF) if user wants it restored as supporting context."
+    }
+  ]
+}
