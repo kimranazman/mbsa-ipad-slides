@@ -1,5 +1,7 @@
 {
   "rewrites": [
+    { "source": "/pbt", "destination": "/pbt.html" },
+    { "source": "/pbt/:path*", "destination": "/pbt.html" },
     { "source": "/(.*)", "destination": "/" }
   ]
 }
