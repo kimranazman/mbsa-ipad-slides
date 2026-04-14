@@ -15,6 +15,7 @@ const pbtData = {
       {
         name: 'Klang Fast Track Industry',
         tagline: 'Revolutionising Industrial Planning Approval Towards A Business-Friendly Future',
+        video: '/videos/mbdk-klang-fast-track.mp4',
         desc: 'Inisiatif Fast Track untuk mempercepatkan proses permohonan Kebenaran Merancang kawasan perindustrian yang mempunyai Pelan Induk (Master Plan) serta kilang tanpa kebenaran (KTK) yang dibina sebelum 28 Ogos 2019. Proses permohonan menjadi mudah, pantas, telus dan cekap — menyokong agenda "Ease of Doing Business".',
         group: 'E FASTRIES',
         highlights: [
@@ -35,6 +36,7 @@ const pbtData = {
       {
         name: 'PJ Eco Recycling Plaza',
         tagline: 'Centre of Excellence For Sustainable Environment',
+        video: '/videos/mbpj-3p4r.mp4',
         desc: 'Pusat Kecemerlangan Ekonomi Kitaran pertama di Malaysia, terletak di Jalan SS8/39, Petaling Jaya. Bangunan bekas pasar basah yang ditukar menjadi pusat 5R (Reduce, Reuse, Recycle, Repurpose, Recover) tiga tingkat — menyediakan pendidikan, bengkel upcycle, galeri, dan hab pengumpulan barangan terpakai.',
         highlights: [
           'Pusat Kecemerlangan Ekonomi Kitaran pertama di Malaysia',
@@ -66,10 +68,12 @@ const pbtData = {
       {
         name: 'e-EKSA',
         tagline: 'Sistem Digital Ekosistem Kondusif Sektor Awam',
+        video: '/videos/mbsa-e-eksa.mp4',
       },
       {
         name: 'IRIS',
         tagline: 'Sistem Maklumat Bersepadu MBSA',
+        video: '/videos/mbsa-iris.mp4',
       },
     ],
   },
@@ -82,6 +86,7 @@ const pbtData = {
       {
         name: 'SENSA',
         tagline: 'Smart Sensor Awareness',
+        video: '/videos/mbsj-sensa.mp4',
         desc: 'Sistem pengesanan dan amaran pejalan kaki pintar berteraskan Kecerdasan Buatan (AI) untuk zon lintasan pejalan kaki. Mengesan kehadiran pejalan kaki secara automatik dan memberi amaran awal melalui isyarat audio dan visual secara masa nyata. Beroperasi 100% tenaga solar.',
         highlights: [
           'Teknologi pengesanan AI dengan amaran visual & audio',
@@ -94,6 +99,7 @@ const pbtData = {
       {
         name: 'Sistem i-DATA',
         tagline: 'Sistem Pengurusan Data Bersepadu MBSJ',
+        video: '/videos/mbsj-idata.mp4',
       },
     ],
   },
@@ -106,6 +112,7 @@ const pbtData = {
       {
         name: 'MYLIA',
         tagline: 'Mobile Licensing Integrated Information Apps',
+        video: '/videos/mdsb-mylia.mp4',
         desc: 'Revolusi digital maklumat pelesenan MDSB yang mengintegrasikan pangkalan data status lesen dan premis secara berpusat. Menghubungkan 4 jabatan — Pelesenan, Kesihatan, Penguatkuasaan & Perundangan — untuk pemantauan pematuhan secara telus dan real-time di lapangan.',
         highlights: [
           'Penyatuan data berpusat dari 4 jabatan',
@@ -117,6 +124,7 @@ const pbtData = {
       {
         name: 'Jom Sabak Bernam',
         tagline: 'Portal Promosi Daerah Sabak Bernam',
+        video: '/videos/mdsb-jsb.mp4',
       },
     ],
   },
@@ -129,6 +137,7 @@ const pbtData = {
       {
         name: 'BOM-46',
         tagline: 'Projek Inovasi Sosial — Penciptaan',
+        video: '/videos/mpaj-bom46.mp4',
         desc: 'Projek inovasi dalam bidang sosial oleh Kumpulan KHP Revolusi 3.0, Jabatan Khidmat Pengurusan, Majlis Perbandaran Ampang Jaya.',
         group: 'KHP Revolusi 3.0',
         highlights: [
@@ -148,6 +157,7 @@ const pbtData = {
       {
         name: 'SPKB',
         tagline: 'Sistem Penguatkuasaan Bersepadu',
+        video: '/videos/mphs-spkb.mp4',
         desc: 'Platform digital bersepadu untuk pengurusan data penguatkuasaan — berfungsi sebagai sistem operasi harian dan data staging platform untuk pengumpulan, penyimpanan sementara, pembersihan dan penyelarasan data sebelum dihantar ke sistem utama.',
         group: 'ASPIRE',
         highlights: [
@@ -168,6 +178,7 @@ const pbtData = {
       {
         name: 'Sistem e-OKU',
         tagline: 'Permohonan Pelekat Kenderaan Orang Kurang Upaya',
+        video: '/videos/mpkj-e-oku.mp4',
         desc: 'Transformasi permohonan pelekat kenderaan OKU secara manual ke dalam talian. Memudahkan golongan kurang upaya untuk memohon dari mana-mana tanpa perlu hadir ke MPKj — selaras dengan objektif Dasar Orang Kelainan Upaya iaitu memastikan hak, peluang dan akses secara saksama.',
         highlights: [
           'Permohonan pelekat kenderaan OKU secara dalam talian',
@@ -187,6 +198,7 @@ const pbtData = {
       {
         name: 'Sistem e-Exam',
         tagline: 'Sistem Peperiksaan Digital MPKS',
+        video: '/videos/mpks-e-exam.mp4',
       },
     ],
   },
@@ -199,6 +211,7 @@ const pbtData = {
       {
         name: 'MyMR',
         tagline: 'My Minor Renovation — Pemudahcara Permit Pengubahsuaian',
+        video: '/videos/mpsp-mymr.mp4',
         desc: 'Aplikasi yang membolehkan permohonan Permit Kerja Kecil (Minor Repair) dikemukakan secara online dari mana-mana sahaja menggunakan telefon pintar atau komputer. Masa proses dikurangkan daripada 30 minit ke kurang dari 10 minit.',
         group: 'FASTER',
         highlights: [
@@ -211,6 +224,7 @@ const pbtData = {
       {
         name: 'Sepang Pro-Lifter',
         tagline: 'Alat Penguatkuasaan Mengangkat Halangan Berat',
+        video: '/videos/mpsp-prolifter.mp4',
         desc: 'Alat yang direka untuk memudahkan anggota penguatkuasaan mengangkat, menolak atau mengalihkan halangan berat seperti stall, mesin RO Water dan lain-lain di tempat awam. Ringan, cepat dan mesra pengguna.',
         group: 'CYBERCREW',
         highlights: [
