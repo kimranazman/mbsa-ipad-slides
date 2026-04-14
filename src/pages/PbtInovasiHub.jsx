@@ -11,9 +11,7 @@ const pbts = [
   { id: 'mpaj', name: 'MPAJ', full: 'Majlis Perbandaran Ampang Jaya', gold: true, products: ['BOM-46'] },
   { id: 'mphs', name: 'MPHS', full: 'Majlis Perbandaran Hulu Selangor', gold: false, products: ['SPKB'] },
   { id: 'mpkj', name: 'MPKj', full: 'Majlis Perbandaran Kajang', gold: true, products: ['Sistem e-OKU'] },
-  { id: 'mpkl', name: 'MPKL', full: 'Majlis Perbandaran Kuala Langat', gold: false, products: [] },
-  { id: 'mpks', name: 'MPKS', full: 'Majlis Perbandaran Kuala Selangor', gold: true, products: ['Sistem e-Exam'] },
-  { id: 'mps', name: 'MPS', full: 'Majlis Perbandaran Selayang', gold: false, products: ['TEDUH'] },
+  { id: 'mpks', name: 'MPKS', full: 'Majlis Perbandaran Kuala Selangor', gold: false, products: ['Sistem e-Exam'] },
   { id: 'mpsp', name: 'MPSp', full: 'Majlis Perbandaran Sepang', gold: true, products: ['MyMR', 'Sepang Pro-Lifter'] },
 ]
 
@@ -26,7 +24,7 @@ export default function PbtInovasiHub() {
       <div className="px-6 pt-6 pb-4 flex-shrink-0 text-center">
         <span className="badge-gold text-[10px] tracking-[0.15em]">Semarakkan Inovasi Sektor Awam 2026</span>
         <h1 className="text-3xl font-black text-gray-900 mt-3">PBT Produk Inovasi</h1>
-        <p className="text-sm text-gray-500 mt-1">12 Pihak Berkuasa Tempatan Negeri Selangor</p>
+        <p className="text-sm text-gray-500 mt-1">10 Pihak Berkuasa Tempatan Negeri Selangor</p>
       </div>
 
       {/* Grid */}

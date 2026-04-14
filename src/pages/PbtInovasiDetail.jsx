@@ -179,13 +179,6 @@ const pbtData = {
     ],
   },
 
-  mpkl: {
-    name: 'MPKL',
-    full: 'Majlis Perbandaran Kuala Langat',
-    gold: false,
-    products: [],
-  },
-
   mpks: {
     name: 'MPKS',
     full: 'Majlis Perbandaran Kuala Selangor',
@@ -194,24 +187,6 @@ const pbtData = {
       {
         name: 'Sistem e-Exam',
         tagline: 'Sistem Peperiksaan Digital MPKS',
-      },
-    ],
-  },
-
-  mps: {
-    name: 'MPS',
-    full: 'Majlis Perbandaran Selayang',
-    gold: false,
-    products: [
-      {
-        name: 'TEDUH',
-        tagline: 'Tempat Elok Dikhaskan Untuk Hentian',
-        desc: 'Inisiatif penyediaan kemudahan rehat untuk penghantar makanan (food delivery riders) di kawasan Majlis Perbandaran Selayang. Fasa 1 merangkumi 5 PBT di Negeri Selangor.',
-        video: '/videos/teduh-selayang.mp4',
-        highlights: [
-          'Kemudahan rehat untuk penghantar makanan',
-          'TEDUH Fasa 1 — salah satu daripada 5 PBT perintis',
-        ],
       },
     ],
   },
@@ -290,13 +265,6 @@ export default function PbtInovasiDetail() {
             <p className="text-lg font-bold mt-4 leading-tight">{pbt.full}</p>
             <p className="text-[11px] opacity-60 mt-1">{pbt.products.length} produk inovasi</p>
           </div>
-
-          {/* Empty state */}
-          {pbt.products.length === 0 && (
-            <div className={`${accentLight} rounded-2xl p-6 text-center border ${pbt.gold ? 'border-rstu-gold/15' : 'border-rstu-red/10'}`}>
-              <p className="text-sm text-gray-500">Tiada produk inovasi didaftarkan</p>
-            </div>
-          )}
 
           {/* Products */}
           {pbt.products.map((product, pi) => (
